@@ -5,6 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --royalBlue-3ebae0bb: #1f6fff;
+  --mediumOrchid-2c0af6fb: #b75dda;
+  --limeGreen-742eaed0: #5ec045;
+  --royal-blue: #1f6fff;
+  --medium-orchid: #b75dda;
+  --lime-green: #5ec045;
+  --white: hsla(218.57142857142856, 0.00%, 100.00%, 1.00);
+  --blue-pudgy: hsla(207.46987951807228, 65.35%, 49.80%, 1.00);
+  --blue-pudgy-shadow: rgba(44, 134, 210, 0.8);
+  --black-shadow: rgba(0, 0, 0, 0.8);
+  --black: hsla(207.46987951807228, 0.00%, 0.00%, 1.00);
+  --grey-light: hsla(0, 1.03%, 69.69%, 1.00);
 }
 
 @media (prefers-color-scheme: dark) {
