@@ -2703,6 +2703,10 @@ figcaption {
   font-weight: 500;
 }
 
+.nav-link.light.primary.black.pricing {
+  display: none;
+}
+
 .nav-link.color {
   display: block;
   margin-right: 0px;
@@ -9468,6 +9472,7 @@ figcaption {
 }
 
 .subpage-header.pricing-1 {
+  display: none;
   padding-top: 90px;
   padding-bottom: 60px;
 

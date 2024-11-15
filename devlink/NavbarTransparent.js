@@ -66,7 +66,7 @@ export function NavbarTransparent({ as: _Component = _Builtin.NavbarWrapper }) {
             {"Services"}
           </_Builtin.NavbarLink>
           <_Builtin.NavbarLink
-            className="nav-link light primary black"
+            className="nav-link light primary black pricing"
             options={{
               href: "#section-pricing",
             }}
