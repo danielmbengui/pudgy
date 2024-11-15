@@ -3243,7 +3243,17 @@ export function HomePage({
                 <_Builtin.Block className="contact-map-block custom" tag="div">
                   {componentGoogleMap}
                 </_Builtin.Block>
-                
+                <_Builtin.MapWidget
+                  className="contact-map-block"
+                  zoom="8"
+                  latlng="46.2043907,6.1431577"
+                  mapStyle="roadmap"
+                  tooltip="Genève"
+                  enableScroll={true}
+                  enableTouch={true}
+                  title="Genève"
+                  apiKey={process.env.DEVLINK_ENV_GOOGLE_MAPS_API_KEY}
+                />
               </_Builtin.Block>
             </_Builtin.Column>
           </_Builtin.Row>

@@ -2535,11 +2535,12 @@ figcaption {
   z-index: 1;
 
   display: flex;
+  width: 100%;
   margin-right: 10px;
   margin-left: 10px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex: 1;
+  flex: 0 0 auto;
 
   border-radius: 4px;
 }
@@ -2559,7 +2560,7 @@ figcaption {
 
     border-radius: 0px;
 
-    background-color: var(--grey-light);
+    background-color: var(--background-menu);
   }
 }
 
@@ -2707,17 +2708,26 @@ figcaption {
 }
 
 .nav-link.light.primary.black {
+  margin-left: 20px;
+
   color: var(--blue-pudgy);
   font-size: 14px;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: none;
 }
 
 .nav-link.light.primary.black.w--current {
-  margin-left: 36px;
+  margin-left: 20px;
   padding-right: 8px;
   padding-left: 8px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-link.light.primary.black {
+    padding-left: 0px;
+  }
 }
 
 .nav-link.light.primary.black.pricing {
@@ -11278,7 +11288,7 @@ figcaption {
 
 @media screen and (max-width: 991px) {
   .transparant-menu-button.w--open {
-    background-color: black;
+    background-color: var(--royal-blue);
   }
 }
 
@@ -12892,6 +12902,7 @@ figcaption {
 
 .container-2 {
   display: flex;
+  width: 100%;
   justify-content: flex-start;
   align-items: center;
 }
@@ -13073,18 +13084,21 @@ figcaption {
 
 .div-block-8 {
   display: flex;
-  margin-left: 30px;
+  margin-left: 50px;
   padding-top: 12px;
   padding-bottom: 11px;
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
 @media screen and (max-width: 991px) {
   .div-block-8 {
     display: flex;
-    margin-left: 0px;
-    padding: 12px 35px 11px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 12px 0px 11px;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -13096,15 +13110,15 @@ figcaption {
 
 @media screen and (max-width: 767px) {
   .div-block-8 {
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 
 @media screen and (max-width: 479px) {
   .div-block-8 {
     display: flex;
-    padding: 12px 25px 11px;
+    padding: 12px 0px 11px;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -13116,13 +13130,9 @@ figcaption {
 
 .div-block-9 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-
   background-color: var(--medium-orchid);
-
   cursor: pointer;
 }
 
@@ -13217,4 +13227,20 @@ figcaption {
 
 .image-3 {
   max-height: 55px;
+}
+
+.div-block-13 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+  .div-block-13 {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
 }

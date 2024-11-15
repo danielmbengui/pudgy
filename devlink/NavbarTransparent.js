@@ -45,69 +45,65 @@ export function NavbarTransparent({
           </_Builtin.Block>
         </_Builtin.NavbarBrand>
         <_Builtin.NavbarMenu className="nav-menu" tag="nav" role="navigation">
-          <_Builtin.NavbarLink
-            className="nav-link light primary black"
-            options={{
-              href: "#",
-            }}
-          >
-            {"Accueil"}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className="nav-link light primary black"
-            options={{
-              href: "#section-community",
-            }}
-          >
-            {"Communauté"}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className="nav-link light primary black"
-            options={{
-              href: "#section-services",
-            }}
-          >
-            {"Services"}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className="nav-link light primary black pricing"
-            options={{
-              href: "#section-pricing",
-            }}
-          >
-            {"Prix"}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className="nav-link light primary black"
-            options={{
-              href: "#section-partners",
-            }}
-          >
-            {"Partenariat"}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className="nav-link light primary black"
-            options={{
-              href: "#section-contact",
-            }}
-          >
-            {"Contact"}
-          </_Builtin.NavbarLink>
+          <_Builtin.Block className="div-block-13" tag="div">
+            <_Builtin.NavbarLink
+              className="nav-link light primary black"
+              options={{
+                href: "#",
+              }}
+            >
+              {"Accueil"}
+            </_Builtin.NavbarLink>
+            <_Builtin.NavbarLink
+              className="nav-link light primary black"
+              options={{
+                href: "#section-community",
+              }}
+            >
+              {"Communauté"}
+            </_Builtin.NavbarLink>
+            <_Builtin.NavbarLink
+              className="nav-link light primary black"
+              options={{
+                href: "#section-services",
+              }}
+            >
+              {"Services"}
+            </_Builtin.NavbarLink>
+            <_Builtin.NavbarLink
+              className="nav-link light primary black pricing"
+              options={{
+                href: "#section-pricing",
+              }}
+            >
+              {"Prix"}
+            </_Builtin.NavbarLink>
+            <_Builtin.NavbarLink
+              className="nav-link light primary black"
+              options={{
+                href: "#section-partners",
+              }}
+            >
+              {"Partenariat"}
+            </_Builtin.NavbarLink>
+            <_Builtin.NavbarLink
+              className="nav-link light primary black"
+              options={{
+                href: "#section-contact",
+              }}
+            >
+              {"Contact"}
+            </_Builtin.NavbarLink>
+          </_Builtin.Block>
           <_Builtin.Block className="div-block-8" tag="div">
-            <_Builtin.Block className="div-block-9" tag="div">
-              <_Builtin.Block className="text-block-12" tag="div">
-                {"Langues"}
-              </_Builtin.Block>
-              <_Builtin.Block className="div-block-11" tag="div">
-                {componentLang}
-              </_Builtin.Block>
-            </_Builtin.Block>
             <_Builtin.Block className="div-block-10" tag="div">
-              <_Builtin.Block className="text-block-13" tag="div">
-                {"Theme"}
-              </_Builtin.Block>
               <_Builtin.Block className="div-block-12" tag="div">
                 {componentTheme}
+              </_Builtin.Block>
+            </_Builtin.Block>
+            <_Builtin.Block className="div-block-9" tag="div">
+              <_Builtin.Block className="div-block-11" tag="div">
+                {componentLang}
               </_Builtin.Block>
             </_Builtin.Block>
           </_Builtin.Block>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { HomePage } from "@/devlink";
-import { Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { LINK_SWISS_FLAG } from "@/constants";
 import { LINK_FRENCH_FLAG } from "@/constants";
 import SwitchTheme from "@/components/SwitchTheme";
@@ -10,6 +10,13 @@ import { LINK_BRITISH_FLAG } from "@/constants";
 import { LINK_GERMAN_FLAG } from "constants";
 import { LINK_ITALIAN_FLAG } from "constants";
 import GoogleMap from "components/GoogleMap";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from "next/router";
+import { useTranslation } from 'next-i18next';
+import { TAB_NAMESPACES } from "constants";
+import { TAB_LANGUAGES } from "constants";
+import { NAMESPACE_HOME } from "constants";
+import SelectLang from "components/SelectLang";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,29 +30,20 @@ const geistMono = localFont({
 });
 
 export default function Home() {
+  const router = useRouter();
+  const { t, i18n} = useTranslation(NAMESPACE_HOME); // 'common' fait référence au fichier JSON utilisé
+
+  useEffect(() => {
+    router.push(router.pathname, router.pathname, { locale: i18n.language });
+    console.log(router.pathname, "lang", i18n.language)
+  }, [i18n.language]);
+
   return (
     <>
 
       <HomePage
       componentGoogleMap={<GoogleMap />}
-      componentLang={<Stack direction={'row'} justifyContent={'center'} alignItems={'center'} spacing={1}>
-        <Stack alignItems={'center'} justifyContent={'center'}>
-        <Image src={LINK_FRENCH_FLAG} width={20} height={20} loading="lazy" alt="suisse flag" />
-        <Typography fontSize={12} sx={{color:'var(--blue-pudgy)'}}>Français</Typography>
-      </Stack>
-      <Stack alignItems={'center'} justifyContent={'center'}>
-        <Image src={LINK_GERMAN_FLAG} width={20} height={20} loading="lazy" alt="suisse flag" />
-        <Typography fontSize={12} sx={{color:'var(--blue-pudgy)'}}>Allemand</Typography>
-      </Stack>
-      <Stack alignItems={'center'} justifyContent={'center'}>
-        <Image src={LINK_ITALIAN_FLAG} width={20} height={20} loading="lazy" alt="suisse flag" />
-        <Typography fontSize={12} sx={{color:'var(--blue-pudgy)'}}>Italien</Typography>
-      </Stack>
-      <Stack alignItems={'center'} justifyContent={'center'}>
-        <Image src={LINK_BRITISH_FLAG} width={20} height={20} loading="lazy" alt="suisse flag" />
-        <Typography fontSize={12} sx={{color:'var(--blue-pudgy)'}}>Anglais</Typography>
-      </Stack>
-      </Stack>}
+      componentLang={<SelectLang />}
       componentTheme={<SwitchTheme />}
       
         videoHeaderBack={<Stack sx={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0, background: 'var( --blue-pudgy-shadow)' }}>
@@ -79,3 +77,9 @@ export default function Home() {
 
   );
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, TAB_NAMESPACES, null, TAB_LANGUAGES,)),
+  },
+});
