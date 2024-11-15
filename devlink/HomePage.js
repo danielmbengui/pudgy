@@ -9,12 +9,21 @@ const _interactionsData = JSON.parse(
   '{"events":{"e-5":{"id":"e-5","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInLeft","autoStopEventId":"e-6"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"ad334638-6b53-2628-91a8-84e629b44216","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"ad334638-6b53-2628-91a8-84e629b44216","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"PX","delay":350,"direction":"LEFT","effectIn":true},"createdOn":1731363864923},"e-7":{"id":"e-7","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInRight","autoStopEventId":"e-8"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"ad334638-6b53-2628-91a8-84e629b4422d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"ad334638-6b53-2628-91a8-84e629b4422d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":350,"direction":"RIGHT","effectIn":true},"createdOn":1731363899041}},"actionLists":{"slideInLeft":{"id":"slideInLeft","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":-100,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}},{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]}]},"slideInRight":{"id":"slideInRight","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":100,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}},{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]}]}},"site":{"mediaQueries":[{"key":"main","min":992,"max":10000},{"key":"medium","min":768,"max":991},{"key":"small","min":480,"max":767},{"key":"tiny","min":0,"max":479}]}}'
 );
 
-export function HomePage({ as: _Component = _Builtin.Block, videoHeaderBack }) {
+export function HomePage({
+  as: _Component = _Builtin.Block,
+  videoHeaderBack,
+  componentLang,
+  componentTheme,
+  componentGoogleMap,
+}) {
   _interactions.useInteractions(_interactionsData);
 
   return (
     <_Component className="block-home-page" tag="div">
-      <NavbarTransparent />
+      <NavbarTransparent
+        componentLang={componentLang}
+        componentTheme={componentTheme}
+      />
       <_Builtin.BackgroundVideoWrapper
         className="hero-video"
         tag="div"
@@ -126,16 +135,18 @@ export function HomePage({ as: _Component = _Builtin.Block, videoHeaderBack }) {
             </_Builtin.Block>
             <_Builtin.Block className="div-block-5" tag="div">
               <_Builtin.Image
+                className="image-2"
                 loading="lazy"
-                width="150"
+                width="auto"
                 height="50"
                 alt=""
                 src="https://cdn.prod.website-files.com/673273ce24e1f47ec7ebf36e/673486b317cb134f1a95162d_appstore.png"
               />
               <_Builtin.Image
+                className="image-3"
                 loading="lazy"
-                width="150"
-                height="58"
+                width="Auto"
+                height="55"
                 alt=""
                 src="https://cdn.prod.website-files.com/673273ce24e1f47ec7ebf36e/673486bd3ec8a78bbe40de8c_google_play.png"
               />
@@ -3229,17 +3240,10 @@ export function HomePage({ as: _Component = _Builtin.Block, videoHeaderBack }) {
             </_Builtin.Column>
             <_Builtin.Column className="contact-column-right" tag="div">
               <_Builtin.Block className="contact-map-wrapper" tag="div">
-                <_Builtin.MapWidget
-                  className="contact-map-block"
-                  zoom="8"
-                  latlng="46.2043907,6.1431577"
-                  mapStyle="roadmap"
-                  tooltip="Genève"
-                  enableScroll={true}
-                  enableTouch={true}
-                  title="Genève"
-                  apiKey={process.env.DEVLINK_ENV_GOOGLE_MAPS_API_KEY}
-                />
+                <_Builtin.Block className="contact-map-block custom" tag="div">
+                  {componentGoogleMap}
+                </_Builtin.Block>
+                
               </_Builtin.Block>
             </_Builtin.Column>
           </_Builtin.Row>

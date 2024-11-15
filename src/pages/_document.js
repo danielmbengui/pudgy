@@ -2,10 +2,14 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
-      <Head />
+    <Html lang="fr">
+      <Head>
+      <title>{"Pudgy | L'application pour les dog sitters, propriétaires et amoureux des chiens"}</title>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8516128530627020"
+     crossOrigin="anonymous"></script>
+      </Head>
       <body className="antialiased">
-        <title>{"Pudgy | L'application pour les dog sitters, propriétaires et amoureux des chiens"}</title>
+        
         <Main />
         <NextScript />
       </body>

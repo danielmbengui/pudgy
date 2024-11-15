@@ -2,7 +2,11 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
 
-export function NavbarTransparent({ as: _Component = _Builtin.NavbarWrapper }) {
+export function NavbarTransparent({
+  as: _Component = _Builtin.NavbarWrapper,
+  componentLang,
+  componentTheme,
+}) {
   return (
     <_Component
       className="navbar"
@@ -89,6 +93,24 @@ export function NavbarTransparent({ as: _Component = _Builtin.NavbarWrapper }) {
           >
             {"Contact"}
           </_Builtin.NavbarLink>
+          <_Builtin.Block className="div-block-8" tag="div">
+            <_Builtin.Block className="div-block-9" tag="div">
+              <_Builtin.Block className="text-block-12" tag="div">
+                {"Langues"}
+              </_Builtin.Block>
+              <_Builtin.Block className="div-block-11" tag="div">
+                {componentLang}
+              </_Builtin.Block>
+            </_Builtin.Block>
+            <_Builtin.Block className="div-block-10" tag="div">
+              <_Builtin.Block className="text-block-13" tag="div">
+                {"Theme"}
+              </_Builtin.Block>
+              <_Builtin.Block className="div-block-12" tag="div">
+                {componentTheme}
+              </_Builtin.Block>
+            </_Builtin.Block>
+          </_Builtin.Block>
         </_Builtin.NavbarMenu>
         <_Builtin.NavbarButton className="transparant-menu-button" tag="div">
           <_Builtin.Icon
