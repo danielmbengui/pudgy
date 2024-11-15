@@ -5,8 +5,12 @@ import "@/styles/globals.css";
 
 
 export default function App({ Component, pageProps }) {
-
-  return (<DevLinkProvider>
-    <Component {...pageProps} />
-  </DevLinkProvider>);
+  return (<>
+    <head>
+      <title>{"Pudgy | L'application pour les dog sitters, propriétaires et amoureux des chiens"}</title>
+    </head>
+    <DevLinkProvider>
+      <Component {...pageProps} />
+    </DevLinkProvider>
+  </>);
 }
