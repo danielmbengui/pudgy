@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -38,27 +38,32 @@ const ARRAY_LANGUAGES_JSON = [
     }
 ]
 
-export default function SelectLang() {
+export default function SelectLang({lang = LANGUAGE_FRENCH}) {
     const [age, setAge] = useState(10);
-    const { t, i18n} = useTranslation(NAMESPACE_COMMON); // 'common' fait référence au fichier JSON utilisé
-    const [lang, setLang] = useState(i18n.language);
-    
+    const { t, i18n } = useTranslation(NAMESPACE_COMMON); // 'common' fait référence au fichier JSON utilisé
+    const [switchLang, setSwitchLang] = useState('');
+
+    useEffect(() => {
+        setSwitchLang(i18n.language);
+    }, [i18n.language])
+
     const handleChange = (event) => {
         //setAge(event.target.value);
-        setLang(event.target.value);
+        setSwitchLang(event.target.value);
     };
 
     return (
         <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            value={lang}
+            defaultValue={switchLang}
+            value={switchLang}
             //label="Age"
             onChange={handleChange}
             sx={{
                 height: 40,
                 //width: 40,
-              //width:'80%',
+                //width:'80%',
                 //background:'red',
                 color: 'var(--primary-text)',
                 border: 'none', // Supprime la bordure
@@ -86,16 +91,17 @@ export default function SelectLang() {
         >
             {
                 ARRAY_LANGUAGES_JSON
-                .sort((a, b) => t(a.value).localeCompare(t(b.value)))
-                .map((lang, index) => {
-                    return (<MenuItem key={`lang${lang.name}${index}`} value={lang.value} >
-                        <Stack alignItems={'center'} justifyContent={'center'} sx={{width:'100%'}} onClick={() => {
-                            i18n.changeLanguage(lang.value);
-                        }}>
-                            <Image src={lang.flag} width={20} height={20} loading="lazy" alt={`${lang.name} flag`} style={{ width: 'auto' }} />
-                            <Typography fontSize={12}>{t(lang.value)}</Typography>
-                        </Stack></MenuItem>);
-                })
+                    .sort((a, b) => t(a.value).localeCompare(t(b.value)))
+                    .map((lang, index) => {
+                        return (<MenuItem key={`lang${lang.name}${index}`} value={lang.value} >
+                            <Stack alignItems={'center'} justifyContent={'center'} sx={{ width: '100%' }} onClick={() => {
+                                i18n.changeLanguage(lang.value);
+                                setSwitchLang(lang.value);
+                            }}>
+                                <Image src={lang.flag} width={20} height={20} loading='lazy'  alt={`${lang.name} flag`} style={{ width: 'auto' }} />
+                                <Typography fontSize={12}>{t(lang.value)}</Typography>
+                            </Stack></MenuItem>);
+                    })
             }
         </Select>
     );
