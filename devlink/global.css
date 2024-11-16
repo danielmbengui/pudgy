@@ -2743,6 +2743,10 @@ figcaption {
   display: none;
 }
 
+.nav-link.light.primary.black.community {
+  display: none;
+}
+
 .nav-link.color {
   display: block;
   margin-right: 0px;
@@ -7575,6 +7579,14 @@ figcaption {
 
 .light-footer-link.dark {
   color: var(--grey-light);
+}
+
+.light-footer-link.community {
+  display: none;
+}
+
+.light-footer-link.pricing {
+  display: none;
 }
 
 .color-social-button {

@@ -55,7 +55,7 @@ export function NavbarTransparent({
               {"Accueil"}
             </_Builtin.NavbarLink>
             <_Builtin.NavbarLink
-              className="nav-link light primary black"
+              className="nav-link light primary black community"
               options={{
                 href: "#section-community",
               }}

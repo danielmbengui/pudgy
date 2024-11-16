@@ -54,7 +54,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
               {"Accueil"}
             </_Builtin.Link>
             <_Builtin.Link
-              className="light-footer-link"
+              className="light-footer-link community"
               button={false}
               block=""
               options={{
@@ -74,7 +74,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
               {"Services"}
             </_Builtin.Link>
             <_Builtin.Link
-              className="light-footer-link"
+              className="light-footer-link pricing"
               button={false}
               block=""
               options={{
