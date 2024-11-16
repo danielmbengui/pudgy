@@ -2726,7 +2726,16 @@ figcaption {
 
 @media screen and (max-width: 991px) {
   .nav-link.light.primary.black {
+    max-width: 100%;
+    margin-right: 20px;
+    padding-right: 0px;
     padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-link.light.primary.black:hover {
+    background-color: hsla(0, 0.00%, 0.00%, 0.00);
   }
 }
 
