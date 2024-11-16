@@ -7521,7 +7521,7 @@ figcaption {
 }
 
 .white-footer.dark {
-  background-color: var(--background-footer);
+  background-color: var(--black-light);
 }
 
 .dark-footer-title {
