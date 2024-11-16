@@ -3355,7 +3355,7 @@ figcaption {
 }
 
 .section.tint.home.princing-2 {
-  display: none;
+  display: block;
 }
 
 .section.app-info-section {
@@ -3466,7 +3466,7 @@ figcaption {
 }
 
 .section.pricing-section.princing-3 {
-  display: none;
+  display: block;
 }
 
 .section.bottom-line {
@@ -3704,7 +3704,7 @@ figcaption {
 
   font-family: 'Google Sans';
   color: var(--blue-pudgy);
-  font-size: 46px;
+  font-size: 34px;
   line-height: 39px;
   font-weight: 300;
 }

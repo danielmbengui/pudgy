@@ -6,11 +6,6 @@ import "@/styles/globals.css";
 
 
 function App({ Component, pageProps }) {
-  /*
-  <head>
-  <title>{"Pudgy | L'application pour les dog sitters, propriétaires et amoureux des chiens"}</title>
-</head>
-  */
   return (
     <DevLinkProvider>
       <Component {...pageProps} />
