@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { HomePage } from "@/devlink";
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Stack, TextField, Typography } from "@mui/material";
 import { LINK_SWISS_FLAG } from "@/constants";
 import { LINK_FRENCH_FLAG } from "@/constants";
 import SwitchTheme from "@/components/SwitchTheme";
@@ -21,6 +21,29 @@ import { NAMESPACE_MENU } from "constants";
 import { NAMESPACE_HOME_HEADER } from "constants";
 import { NAMESPACE_SERVICES } from "constants";
 import { NAMESPACE_FOOTER } from "constants";
+import { NAMESPACE_CONTACT } from "constants";
+import { NAMESPACE_PARTNERS } from "constants";
+import { alpha, styled } from '@mui/material/styles';
+
+const CssTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: 'var(--primary-text)',
+  },
+  '& .MuiInput-underline:after': {
+    //borderBottomColor: '#B2BAC2',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'var(--grey-light)',
+    },
+    '&:hover fieldset': {
+      borderColor: 'var(--royal-blue)',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: 'var(--blue-pudgy)',
+    },
+  },
+});
 
 function getJsonValue(value, lang, namespace = 'common') {
   const data = require(`@/public/locales/${lang}/${namespace}.json`);
@@ -78,7 +101,26 @@ export default function Home() {
   const [activityTitle, setActivityTitle] = useState("");
   const [activityText, setActivityText] = useState("");
 
+  const [timeTitle, setTimeTitle] = useState("");
+  const [timeText, setTimeText] = useState("");
+  const [securityTitle, setSecurityTitle] = useState("");
+  const [securityText, setSecurityText] = useState("");
+  const [usefulTitle, setUsefulTitle] = useState("");
+  const [usefulText, setUsefulText] = useState("");
+  const [tipsTitle, setTipsTitle] = useState("");
+  const [tipsText, setTipsText] = useState("");
+  const [customTitle, setCustomTitle] = useState("");
+  const [customText, setCustomText] = useState("");
+  const [groupsTitle, setGroupsTitle] = useState("");
+  const [groupsText, setGroupsText] = useState("");
 
+  const [titlePartners, setTitlePartners] = useState("");
+  const [subtitlePartners, setSubtitlePartners] = useState("");
+
+  const [nameContact, setNameContact] = useState("");
+  const [emailContact, setEmailContact] = useState("");
+  const [messageContact, setMessageContact] = useState("");
+  const [sendContact, setSendContact] = useState("");
 
   useEffect(() => {
     setNavigation(t('navigation', { ns: NAMESPACE_FOOTER }));
@@ -117,11 +159,36 @@ export default function Home() {
     setActivityTitle(t('activity.title', { ns: NAMESPACE_SERVICES }));
     setActivityText(t('activity.text', { ns: NAMESPACE_SERVICES }));
     //console.log(router.pathname, "lang", i18n.language)
+    setTimeTitle(t('time.title', { ns: NAMESPACE_SERVICES }));
+    setTimeText(t('time.text', { ns: NAMESPACE_SERVICES }));
+
+    setSecurityTitle(t('security.title', { ns: NAMESPACE_SERVICES }));
+    setSecurityText(t('security.text', { ns: NAMESPACE_SERVICES }));
+
+    setUsefulTitle(t('useful.title', { ns: NAMESPACE_SERVICES }));
+    setUsefulText(t('useful.text', { ns: NAMESPACE_SERVICES }));
+
+    setTipsTitle(t('tips.title', { ns: NAMESPACE_SERVICES }));
+    setTipsText(t('tips.text', { ns: NAMESPACE_SERVICES }));
+
+    setCustomTitle(t('custom.title', { ns: NAMESPACE_SERVICES }));
+    setCustomText(t('custom.text', { ns: NAMESPACE_SERVICES }));
+
+    setGroupsTitle(t('groups.title', { ns: NAMESPACE_SERVICES }));
+    setGroupsText(t('groups.text', { ns: NAMESPACE_SERVICES }));
+    //console.log(router.pathname, "lang", i18n.language)
+    setTitlePartners(t('title', { ns: NAMESPACE_PARTNERS }));
+    setSubtitlePartners(t('subtitle', { ns: NAMESPACE_PARTNERS }));
+
+    setNameContact(t('name', { ns: NAMESPACE_CONTACT }));
+    setEmailContact(t('email', { ns: NAMESPACE_CONTACT }));
+    setMessageContact(t('message', { ns: NAMESPACE_CONTACT }));
+    setSendContact(t('send', { ns: NAMESPACE_CONTACT }));
   });
 
   useEffect(() => {
     router.push(router.pathname, router.pathname, { locale: i18n.language });
-   // router.push(router.asPath.split('#')[1] ? `#${asPath.split('#')[1]}` : '', undefined, { locale: i18n.language });
+    // router.push(router.asPath.split('#')[1] ? `#${asPath.split('#')[1]}` : '', undefined, { locale: i18n.language });
     //changeLanguage(i18n.language);
     //getJsonValue('copyright', i18n.language);
     //setCopyright(getJsonValue('copyright', i18n.language));
@@ -171,6 +238,19 @@ export default function Home() {
       nurseTitle={nurseTitle}
       activityTitle={activityTitle}
 
+      timeTitle={timeTitle}
+      timeText={timeText}
+      securityTitle={securityTitle}
+      securityText={securityText}
+      usefulTitle={usefulTitle}
+      usefulText={usefulText}
+      tipsTitle={tipsTitle}
+      tipsText={tipsText}
+      customTitle={customTitle}
+      customText={customText}
+      groupsTitle={groupsTitle}
+      groupsText={groupsText}
+
       dogsitterText={dogsitterText}
       dogbabyText={dogbabyText}
       dogtrainerText={dogtrainerText}
@@ -178,9 +258,46 @@ export default function Home() {
       nurseText={nurseText}
       activityText={activityText}
 
+      titlePartners={titlePartners}
+      subtitlePartners={subtitlePartners}
+
+      nameContact={nameContact}
+      emailContact={emailContact}
+      messageContact={messageContact}
+      sendContact={sendContact}
+
       componentGoogleMap={<GoogleMap />}
       componentLang={<SelectLang lang={i18n.language} />}
       componentTheme={<SwitchTheme />}
+      componentInputName={<CssTextField fullWidth sx={{ height: 40, }} slotProps={{
+        input: {
+          style: {
+            height: '100%', // L'élément <input> prend la hauteur du conteneur
+            width: '100%', // L'élément <input> prend la hauteur du conteneur
+            color:"var(--primary-text)",
+            //padding: '0 10px', // Ajuster le padding si nécessaire
+          },
+        },
+      }} />}
+      componentInputEmail={<CssTextField error helperText="Incorrect entry." fullWidth sx={{ height: 40, }} slotProps={{
+        input: {
+          style: {
+            height: '100%', // L'élément <input> prend la hauteur du conteneur
+            width: '100%', // L'élément <input> prend la hauteur du conteneur
+            //padding: '0 10px', // Ajuster le padding si nécessaire
+          },
+        },
+      }} />}
+      componentInputMessage={<CssTextField multiline rows={5} fullWidth sx={{ height: 148, }}  slotProps={{
+        input: {
+          style: {
+            height: '100%', // L'élément <input> prend la hauteur du conteneur
+            width: '100%', // L'élément <input> prend la hauteur du conteneur
+            //padding: '0 10px', // Ajuster le padding si nécessaire
+          },
+        },
+      }} />}
+      componentButtonSend={<Button disabled={false} fullWidth variant="contained" sx={{ height: 35, borderRadius: 50 }}>{sendContact}</Button>}
 
       videoHeaderBack={<Stack sx={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0, background: 'var( --blue-pudgy-shadow)' }}>
         <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden" }}>

@@ -1,0 +1,52 @@
+{
+    "title": "Un'app pensata per il benessere.",
+    "subtitle": "Goditi servizi personalizzati per il tuo amico a quattro zampe: custodia, passeggiate, addestramento e molto altro.",
+    "dogsitter": {
+        "title": "Dog Sitter",
+        "text": "Con la nostra app, trova facilmente lavori vicino a te per prenderti cura di adorabili cani."
+    },
+    "dogbaby": {
+        "title": "Dog Care",
+        "text": "Non hai tempo per portare a spasso o accudire il tuo cane? Pudgy ti aiuta a trovare appassionati pronti a prendersene cura."
+    },
+    "dogtrainer": {
+        "title": "Dog Trainer",
+        "text": "Addestrare un cane può essere complicato. Affidati ai nostri esperti certificati per accompagnarti nel suo apprendimento."
+    },
+    "vet": {
+        "title": "Servizi Veterinari",
+        "text": "Hai bisogno di un veterinario d'urgenza o di una clinica vicina? Pudgy ti aiuta a trovare rapidamente professionisti qualificati."
+    },
+    "nurse": {
+        "title": "Asili per Cani",
+        "text": "Per cuccioli o cani che necessitano di attenzioni speciali, scopri i nostri servizi di asilo su misura per le loro esigenze specifiche."
+    },
+    "activity": {
+        "title": "Attività e svago",
+        "text": "Scopri eventi, luoghi e attività per rafforzare il legame con il tuo cane divertendoti."
+    },
+    "time": {
+        "title": "Risparmio di tempo",
+        "text": "Non cercare dappertutto: un'unica app per soddisfare tutte le esigenze del tuo cane."
+    },
+    "security": {
+        "title": "Sicuro",
+        "text": "Tutti i nostri professionisti sono verificati per garantire la sicurezza e il comfort del tuo cane."
+    },
+    "useful": {
+        "title": "Utile",
+        "text": "Cerchi luoghi che accettano cani? Pudgy ti supporta con consigli adatti a te e al tuo compagno."
+    },
+    "tips": {
+        "title": "Consigli quotidiani",
+        "text": "Ogni giorno consigli per prenderti cura del tuo cane: alimentazione, salute, attività e molto altro."
+    },
+    "custom": {
+        "title": "Personalizzato",
+        "text": "Hai bisogno di un servizio per il tuo cane? Dalla custodia all'addestramento, tutto è a portata di mano."
+    },
+    "groups": {
+        "title": "Gruppi",
+        "text": "Organizza o unisciti a passeggiate collettive per far socializzare il tuo cane divertendosi."
+    }
+}

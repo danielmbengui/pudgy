@@ -24,5 +24,29 @@
     "activity":{
         "title":"Activités et loisirs",
         "text":"Découvre des événements, des lieux et des activités pour renforcer le lien avec ton chien tout en s’amusant."
+    },
+    "time":{
+        "title":"Gain de temps",
+        "text":"Ne cherche plus partout : une seule application pour répondre à tous les besoins de ton chien."
+    },
+    "security":{
+        "title":"Sécurisé",
+        "text":"Tous nos professionnels sont vérifiés pour assurer la sécurité et le confort de ton chien."
+    },
+    "useful":{
+        "title":"Utile",
+        "text":"Besoin de lieux acceptant les chiens ? Pudgy t'accompagne avec des conseils adaptés à toi et ton compagnon."
+    },
+    "tips":{
+        "title":"Conseils quotidiens",
+        "text":"Chaque jour des conseils pour prendre soin de ton chien : alimentation, santé, activités et bien plus encore."
+    },
+    "custom":{
+        "title":"Personnalisé",
+        "text":"Besoin d’un service pour ton chien ? De la garde à l’éducation, tout est à portée de main."
+    },
+    "groups":{
+        "title":"Groupes",
+        "text":"Organise ou rejoins des promenades collectives pour que ton chien se sociabilise tout en s’amusant."
     }
 }

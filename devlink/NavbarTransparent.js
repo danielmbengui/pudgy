@@ -83,7 +83,7 @@ export function NavbarTransparent({
               {"Prix"}
             </_Builtin.NavbarLink>
             <_Builtin.NavbarLink
-              className="nav-link light primary black"
+              className="nav-link light primary black partners"
               options={{
                 href: "#section-partners",
               }}

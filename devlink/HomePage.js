@@ -39,7 +39,12 @@ export function HomePage({
   activityTitle = "Activités & Loisirs",
   menuFastLinks = "Liens rapides",
   menuSocials = "Réseaux",
+  nameContact = "Nom",
+  messageContact = "Message",
+  emailContact = "Email",
   activityText = "Découvre des événements, des lieux et des activités pour renforcer le lien avec ton chien tout en s’amusant.",
+  subtitlePartners = "Rejoignez une communauté qui partage vos valeurs et celles des amoureux des chiens.",
+  titlePartners = "Nos partenaires",
   servicesTitle = "Une application conçue pour le bien être.",
   servicesSubtitle = "Profite de services personnalisés pour ton compagnon à quatre pattes : garde, promenade, éducation, et bien plus encore.",
   leitmotiv = "Une communauté dédiée au bien-être canin",
@@ -50,6 +55,22 @@ export function HomePage({
   promo = "Crée avec passion avec Webflow - Devlink",
   moreQuestions = "Des questions? Tu peux nous contacter à info@pudgy.com",
   menuNavigation = "Navigation",
+  componentInputName,
+  componentInputEmail,
+  componentInputMessage,
+  componentButtonSend,
+  timeTitle = "Gain de temps",
+  timeText = "Ne cherche plus partout : une seule application pour répondre à tous les besoins de ton chien.",
+  securityTitle = "Sécurisé",
+  securityText = "Tous nos professionnels sont vérifiés pour assurer la sécurité et le confort de ton chien.",
+  usefulTitle = "Utile",
+  usefulText = "Besoin de lieux acceptant les chiens ? Pudgy t'accompagne avec des conseils adaptés à toi et ton compagnon.",
+  groupsTitle = "Groupes",
+  groupsText = "Organise ou rejoins des promenades collectives pour que ton chien se sociabilise tout en s’amusant.",
+  customText = "Besoin d’un service pour ton chien ? De la garde à l’éducation, tout est à portée de main.",
+  customTitle = "Personnalisé",
+  tipsText = "Chaque jour des conseils pour prendre soin de ton chien : alimentation, santé, activités et bien plus encore.",
+  tipsTitle = "Conseils quotidiens",
 }) {
   return (
     <_Component className="block-home-page" tag="div">
@@ -86,11 +107,36 @@ export function HomePage({
         servicesTitle={servicesTitle}
         servicesSubtitle={servicesSubtitle}
       />
-      <HomeServices1 />
+      <HomeServices1
+        timeTitle={timeTitle}
+        timeText={timeText}
+        securityTitle={securityTitle}
+        securityText={securityText}
+        usefulTitle={usefulTitle}
+        usefulText={usefulText}
+        groupsTitle={groupsTitle}
+        groupsText={groupsText}
+        customText={customText}
+        customTitle={customTitle}
+        tipsText={tipsText}
+        tipsTitle={tipsTitle}
+      />
       <HomePricing />
       <HomePartners />
-      <HomePartners1 />
-      <HomeContact componentGoogleMap={componentGoogleMap} />
+      <HomePartners1
+        titlePartners={titlePartners}
+        subtitlePartners={subtitlePartners}
+      />
+      <HomeContact
+        componentGoogleMap={componentGoogleMap}
+        nameContact={nameContact}
+        emailContact={emailContact}
+        messageContact={messageContact}
+        componentInputName={componentInputName}
+        componentInputEmail={componentInputEmail}
+        componentInputMessage={componentInputMessage}
+        componentButtonSend={componentButtonSend}
+      />
       <FooterBlack
         leitmotiv={leitmotiv}
         menuHome={menuHome}

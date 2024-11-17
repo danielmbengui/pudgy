@@ -1,0 +1,52 @@
+{
+    "title": "An app designed for well-being.",
+    "subtitle": "Enjoy personalized services for your four-legged companion: sitting, walking, training, and much more.",
+    "dogsitter": {
+        "title": "Dog Sitter",
+        "text": "With our app, easily find jobs near you to take care of adorable dogs."
+    },
+    "dogbaby": {
+        "title": "Dog Care",
+        "text": "No time to walk or take care of your dog? Pudgy helps you find dog lovers ready to care for them."
+    },
+    "dogtrainer": {
+        "title": "Dog Trainer",
+        "text": "Training a dog can be challenging. Trust our certified experts to help with the learning process."
+    },
+    "vet": {
+        "title": "Veterinary Services",
+        "text": "Need an emergency vet or a nearby clinic? Pudgy helps you quickly find qualified professionals."
+    },
+    "nurse": {
+        "title": "Canine Nurseries",
+        "text": "For puppies or dogs requiring special attention, discover nursery services tailored to their specific needs."
+    },
+    "activity": {
+        "title": "Activities and Leisure",
+        "text": "Discover events, locations, and activities to strengthen your bond with your dog while having fun."
+    },
+    "time": {
+        "title": "Time-Saving",
+        "text": "No need to search everywhere: one app for all your dog's needs."
+    },
+    "security": {
+        "title": "Secure",
+        "text": "All our professionals are verified to ensure your dog's safety and comfort."
+    },
+    "useful": {
+        "title": "Useful",
+        "text": "Need dog-friendly places? Pudgy provides tips tailored to you and your companion."
+    },
+    "tips": {
+        "title": "Daily Advice",
+        "text": "Daily tips to take care of your dog: nutrition, health, activities, and much more."
+    },
+    "custom": {
+        "title": "Personalized",
+        "text": "Need a service for your dog? From sitting to training, everything is within reach."
+    },
+    "groups": {
+        "title": "Groups",
+        "text": "Organize or join group walks so your dog can socialize and have fun."
+    }
+}

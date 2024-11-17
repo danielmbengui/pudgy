@@ -2,10 +2,14 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
 
-export function HomePartners1({ as: _Component = _Builtin.Section }) {
+export function HomePartners1({
+  as: _Component = _Builtin.Section,
+  titlePartners = "Nos partenaires",
+  subtitlePartners = "Rejoignez une communauté qui partage vos valeurs et celles des amoureux des chiens.",
+}) {
   return (
     <_Component
-      className="image-section clients"
+      className="image-section clients _1"
       grid={{
         type: "section",
       }}
@@ -15,12 +19,10 @@ export function HomePartners1({ as: _Component = _Builtin.Section }) {
         <_Builtin.Container className="container" tag="div">
           <_Builtin.Block className="section-title-wrapper" tag="div">
             <_Builtin.Heading className="section-title partners" tag="h2">
-              {"Nos partenaires"}
+              {titlePartners}
             </_Builtin.Heading>
             <_Builtin.Block className="section-description partners" tag="div">
-              {
-                "Rejoignez une communauté qui partage vos valeurs et celles des amoureux des chiens."
-              }
+              {subtitlePartners}
             </_Builtin.Block>
           </_Builtin.Block>
           <_Builtin.Row

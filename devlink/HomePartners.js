@@ -12,7 +12,7 @@ export function HomePartners({ as: _Component = _Builtin.Section }) {
 
   return (
     <_Component
-      className="section overflow-none building-1"
+      className="section overflow-none building-1 partners"
       grid={{
         type: "section",
       }}

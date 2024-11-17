@@ -105,7 +105,7 @@ export function FooterBlack({
               {"Prix"}
             </_Builtin.Link>
             <_Builtin.Link
-              className="light-footer-link"
+              className="light-footer-link partners"
               button={false}
               block=""
               options={{

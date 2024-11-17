@@ -17,6 +17,7 @@
   --black-shadow: rgba(0, 0, 0, 0.8);
   --black: hsla(207.46987951807228, 0.00%, 0.00%, 1.00);
   --grey-light: hsla(0, 1.03%, 69.69%, 1.00);
+  --overlay-shadow: hsla(218.57142857142856, 0.00%, 100.00%, 0.85);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +29,7 @@
     --background-menu: hsla(207.46987951807228, 0.00%, 0.00%, 0.95);
     --foreground: #ededed;
     --blue-pudgy: hsla(207, 83%, 51%, 1.00);
+    --overlay-shadow: hsla(0, 0%, 0%, 0.85);
   }
 }
 
@@ -39,6 +41,7 @@
   --background-menu: hsla(207.46987951807228, 0.00%, 0.00%, 0.95);
   --foreground: #ededed;
   --blue-pudgy: hsla(207, 83%, 51%, 1.00);
+  --overlay-shadow: hsla(0, 0%, 0%, 0.85);
 }
 
 body {

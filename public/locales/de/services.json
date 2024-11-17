@@ -1,0 +1,52 @@
+{
+    "title": "Eine App für das Wohlbefinden entwickelt.",
+    "subtitle": "Profitiere von personalisierten Dienstleistungen für deinen vierbeinigen Begleiter: Betreuung, Spaziergänge, Erziehung und vieles mehr.",
+    "dogsitter": {
+        "title": "Hundesitter",
+        "text": "Mit unserer App findest du ganz einfach Aufträge in deiner Nähe, um dich um liebenswerte Hunde zu kümmern."
+    },
+    "dogbaby": {
+        "title": "Hundebetreuung",
+        "text": "Keine Zeit, deinen Hund auszuführen oder zu betreuen? Pudgy hilft dir, Hundeliebhaber zu finden, die sich um ihn kümmern."
+    },
+    "dogtrainer": {
+        "title": "Hundetrainer",
+        "text": "Einen Hund zu erziehen kann schwierig sein. Vertraue unseren zertifizierten Experten, um dich bei seiner Ausbildung zu unterstützen."
+    },
+    "vet": {
+        "title": "Tierarzt-Dienstleistungen",
+        "text": "Benötigst du dringend einen Tierarzt oder eine nahegelegene Klinik? Pudgy hilft dir, schnell qualifizierte Fachleute zu finden."
+    },
+    "nurse": {
+        "title": "Hunde-Krippen",
+        "text": "Für Welpen oder Hunde, die besondere Betreuung benötigen, bieten wir Krippenservices, die auf ihre spezifischen Bedürfnisse zugeschnitten sind."
+    },
+    "activity": {
+        "title": "Aktivitäten und Freizeit",
+        "text": "Entdecke Veranstaltungen, Orte und Aktivitäten, um die Bindung zu deinem Hund zu stärken und Spaß zu haben."
+    },
+    "time": {
+        "title": "Zeitersparnis",
+        "text": "Suche nicht länger überall: Eine App, um alle Bedürfnisse deines Hundes zu erfüllen."
+    },
+    "security": {
+        "title": "Sicher",
+        "text": "Alle unsere Fachleute werden überprüft, um die Sicherheit und den Komfort deines Hundes zu gewährleisten."
+    },
+    "useful": {
+        "title": "Nützlich",
+        "text": "Suchst du hundefreundliche Orte? Pudgy unterstützt dich mit auf dich und deinen Begleiter zugeschnittenen Tipps."
+    },
+    "tips": {
+        "title": "Tägliche Tipps",
+        "text": "Jeden Tag Tipps, um dich um deinen Hund zu kümmern: Ernährung, Gesundheit, Aktivitäten und vieles mehr."
+    },
+    "custom": {
+        "title": "Personalisiert",
+        "text": "Brauchst du einen Service für deinen Hund? Von der Betreuung bis zur Erziehung ist alles nur einen Klick entfernt."
+    },
+    "groups": {
+        "title": "Gruppen",
+        "text": "Organisiere oder schließe dich Gruppenspaziergängen an, damit dein Hund Spaß hat und sich sozialisiert."
+    }
+}
