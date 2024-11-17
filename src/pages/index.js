@@ -279,7 +279,7 @@ export default function Home() {
           },
         },
       }} />}
-      componentInputEmail={<CssTextField error helperText="Incorrect entry." fullWidth sx={{ height: 40, }} slotProps={{
+      componentInputEmail={<CssTextField /*error helperText="Incorrect entry."*/ fullWidth sx={{ height: 40, }} slotProps={{
         input: {
           style: {
             height: '100%', // L'élément <input> prend la hauteur du conteneur
