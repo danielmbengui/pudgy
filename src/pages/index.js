@@ -22,8 +22,6 @@ import { NAMESPACE_HOME_HEADER } from "constants";
 import { NAMESPACE_SERVICES } from "constants";
 import { NAMESPACE_FOOTER } from "constants";
 
-
-
 function getJsonValue(value, lang, namespace = 'common') {
   const data = require(`@/public/locales/${lang}/${namespace}.json`);
 
