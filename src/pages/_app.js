@@ -32,9 +32,6 @@ const theme = createTheme({
 function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <head>
-      <meta name="google-adsense-account" content="ca-pub-8516128530627020" />
-      </head>
     <DevLinkProvider>
       <Component {...pageProps} />
       <DynamicAd />

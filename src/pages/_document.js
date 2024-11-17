@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="fr">
       <Head>
-
-                  <script
+        <meta name="google-adsense-account" content="ca-pub-8516128530627020" />
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         ></script>
