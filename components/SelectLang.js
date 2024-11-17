@@ -38,7 +38,7 @@ const ARRAY_LANGUAGES_JSON = [
     }
 ]
 
-export default function SelectLang({lang = LANGUAGE_FRENCH}) {
+const SelectLang = ({lang = LANGUAGE_FRENCH}) => {
     const [age, setAge] = useState(10);
     const { t, i18n } = useTranslation(NAMESPACE_COMMON); // 'common' fait référence au fichier JSON utilisé
     const [switchLang, setSwitchLang] = useState('');
@@ -106,3 +106,5 @@ export default function SelectLang({lang = LANGUAGE_FRENCH}) {
         </Select>
     );
 }
+
+export default SelectLang;

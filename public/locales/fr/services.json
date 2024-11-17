@@ -1,0 +1,28 @@
+{
+    "title":"Une application conçue pour le bien être.",
+    "subtitle":"Profite de services personnalisés pour ton compagnon à quatre pattes : garde, promenade, éducation, et bien plus encore.",
+    "dogsitter":{
+        "title":"Dog Sitter",
+        "text":"Avec notre application, trouve facilement des missions près de chez toi pour t’occuper de chiens adorables."
+    },
+    "dogbaby":{
+        "title":"Dog Baby",
+        "text":"Pas le temps de promener ou de garder ton chien ? Pudgy t'aide à trouver des passionnés prêts à prendre soin de lui."
+    },
+    "dogtrainer":{
+        "title":"Dog Trainer",
+        "text":"Éduquer un chien peut être compliqué. Fais confiance à nos experts certifiés pour t'accompagner dans son apprentissage."
+    },
+    "vet":{
+        "title":"Services Vétérinaires",
+        "text":"Besoin d'un vétérinaire en urgence ou d'une clinique proche de chez toi ? Pudgy t'aide à trouver des professionnels qualifiés rapidement."
+    },
+    "nurse":{
+        "title":"Nurseries Canines",
+        "text":"Pour les chiots ou les chiens nécessitant une attention particulière, découvre nos services de nurserie adaptés à leurs besoins spécifiques."
+    },
+    "activity":{
+        "title":"Activités et loisirs",
+        "text":"Découvre des événements, des lieux et des activités pour renforcer le lien avec ton chien tout en s’amusant."
+    }
+}

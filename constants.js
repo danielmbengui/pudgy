@@ -4,9 +4,15 @@ export const LINK_GERMAN_FLAG = "/images/flag-de.png";
 export const LINK_ITALIAN_FLAG = "/images/flag-it.png";
 export const LINK_BRITISH_FLAG = "/images/flag-en.png";
 
-export const NAMESPACE_COMMON ="common";
-export const NAMESPACE_HOME ="home";
-export const TAB_NAMESPACES = [NAMESPACE_COMMON, NAMESPACE_HOME];
+export const NAMESPACE_COMMON = "common";
+export const NAMESPACE_HOME = "home";
+export const NAMESPACE_MENU = "menu";
+export const NAMESPACE_FOOTER = "footer";
+export const NAMESPACE_HOME_HEADER = "home header";
+export const NAMESPACE_SERVICES = "services";
+export const NAMESPACE_PARTNERS = "partners";
+export const NAMESPACE_CONTACT = "contact";
+export const TAB_NAMESPACES = [NAMESPACE_COMMON, NAMESPACE_HOME, NAMESPACE_MENU, NAMESPACE_FOOTER, NAMESPACE_HOME_HEADER, NAMESPACE_SERVICES, NAMESPACE_PARTNERS, NAMESPACE_CONTACT];
 
 export const LANGUAGE_FRENCH = 'fr';
 export const LANGUAGE_GERMAN = 'de';

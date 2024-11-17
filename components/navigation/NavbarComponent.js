@@ -1,8 +1,11 @@
-"use client";
 import React from "react";
-import * as _Builtin from "./_Builtin";
+import * as _Builtin from "devlink/_Builtin";
+import { useTranslation } from 'next-i18next';
+import { NAMESPACE_MENU } from "constants";
+import SwitchTheme from "components/SwitchTheme";
+import SelectLang from "components/SelectLang";
 
-export function NavbarTransparent({
+export function NavbarComponent({
   as: _Component = _Builtin.NavbarWrapper,
   componentLang,
   componentTheme,
@@ -11,6 +14,7 @@ export function NavbarTransparent({
   menuPartners = "Partenariat",
   menuContact = "Contact",
 }) {
+  const { t, i18n } = useTranslation(NAMESPACE_MENU); // 'common' fait référence au fichier JSON utilisé
   return (
     <_Component
       className="navbar"
@@ -56,7 +60,7 @@ export function NavbarTransparent({
                 href: "#section-header",
               }}
             >
-              {menuHome}
+              {t('home')}
             </_Builtin.NavbarLink>
             <_Builtin.NavbarLink
               className="nav-link light primary black community"
@@ -72,7 +76,7 @@ export function NavbarTransparent({
                 href: "#section-services",
               }}
             >
-              {menuServices}
+              {t('services')}
             </_Builtin.NavbarLink>
             <_Builtin.NavbarLink
               className="nav-link light primary black pricing"
@@ -88,7 +92,7 @@ export function NavbarTransparent({
                 href: "#section-partners",
               }}
             >
-              {menuPartners}
+              {t('partners')}
             </_Builtin.NavbarLink>
             <_Builtin.NavbarLink
               className="nav-link light primary black"
@@ -96,18 +100,18 @@ export function NavbarTransparent({
                 href: "#section-contact",
               }}
             >
-              {menuContact}
+              {t('contact')}
             </_Builtin.NavbarLink>
           </_Builtin.Block>
           <_Builtin.Block className="div-block-8" tag="div">
             <_Builtin.Block className="div-block-10" tag="div">
               <_Builtin.Block className="div-block-12" tag="div">
-                {componentTheme}
+                {<SwitchTheme />}
               </_Builtin.Block>
             </_Builtin.Block>
             <_Builtin.Block className="div-block-9" tag="div">
               <_Builtin.Block className="div-block-11" tag="div">
-                {componentLang}
+                {<SelectLang />}
               </_Builtin.Block>
             </_Builtin.Block>
           </_Builtin.Block>

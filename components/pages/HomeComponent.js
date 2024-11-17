@@ -1,18 +1,20 @@
-"use client";
 import React from "react";
-import * as _Builtin from "./_Builtin";
-import { NavbarTransparent } from "./NavbarTransparent";
-import { HomeHeader } from "./HomeHeader";
-import { HomeHeaderDownload } from "./HomeHeaderDownload";
-import { HomeServices } from "./HomeServices";
-import { HomeServices1 } from "./HomeServices1";
-import { HomePricing } from "./HomePricing";
-import { HomePartners } from "./HomePartners";
-import { HomePartners1 } from "./HomePartners1";
-import { HomeContact } from "./HomeContact";
-import { FooterBlack } from "./FooterBlack";
+import * as _Builtin from "@/devlink/_Builtin";
+import { NavbarTransparent } from "@/devlink/NavbarTransparent";
+import { HomeHeader } from "@/devlink/HomeHeader";
+import { HomeHeaderDownload } from "@/devlink/HomeHeaderDownload";
+import { HomeServices } from "@/devlink/HomeServices";
+import { HomeServices1 } from "@/devlink/HomeServices1";
+import { HomePricing } from "@/devlink/HomePricing";
+import { HomePartners } from "@/devlink/HomePartners";
+import { HomePartners1 } from "@/devlink/HomePartners1";
+import { HomeContact } from "@/devlink/HomeContact";
+import { FooterBlack } from "@/devlink/FooterBlack";
+import { NavbarComponent } from "components/navigation/NavbarComponent";
+import SelectLang from "components/SelectLang";
+import SwitchTheme from "components/SwitchTheme";
 
-export function HomePage({
+export function HomeComponent({
   as: _Component = _Builtin.Block,
   videoHeaderBack,
   componentLang,
@@ -53,9 +55,9 @@ export function HomePage({
 }) {
   return (
     <_Component className="block-home-page" tag="div">
-      <NavbarTransparent
-        componentLang={componentLang}
-        componentTheme={componentTheme}
+      <NavbarComponent
+        componentLang={<SelectLang />}
+        componentTheme={<SwitchTheme />}
         menuHome={menuHome}
         menuServices={menuServices}
         menuPartners={menuPartners}

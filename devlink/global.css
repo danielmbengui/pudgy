@@ -6295,6 +6295,10 @@ figcaption {
   text-decoration: none;
 }
 
+.bottom-footer-link.dark:hover {
+  color: var(--royal-blue);
+}
+
 .bottom-footer-link.color {
   color: #babdc2;
   text-decoration: none;
@@ -12968,6 +12972,10 @@ figcaption {
   color: var(--blue-pudgy);
 }
 
+.link:hover {
+  color: var(--royal-blue);
+}
+
 .paragraph {
   font-family: 'Google Sans';
   font-weight: 300;
@@ -13264,4 +13272,38 @@ figcaption {
     flex-wrap: nowrap;
     align-items: flex-start;
   }
+}
+
+.div-block-14 {
+  width: 100%;
+  height: 100%;
+}
+
+.rich-text-block-2 {
+  margin-top: 60px;
+}
+
+.paragraph-3 {
+  font-family: 'Google Sans';
+  color: var(--grey-light);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.link-2 {
+  color: var(--blue-pudgy);
+  text-decoration: none;
+}
+
+.link-2:hover {
+  color: var(--royal-blue);
+}
+
+.link-3 {
+  color: var(--blue-pudgy);
+  text-decoration: none;
+}
+
+.link-3:hover {
+  color: var(--royal-blue);
 }

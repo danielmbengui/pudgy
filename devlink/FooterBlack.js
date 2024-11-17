@@ -2,7 +2,28 @@
 import React from "react";
 import * as _Builtin from "./_Builtin";
 
-export function FooterBlack({ as: _Component = _Builtin.Section }) {
+export function FooterBlack({
+  as: _Component = _Builtin.Section,
+  leitmotiv = "Une communauté dédiée au bien-être canin",
+  menuHome = "Accueil",
+  menuServices = "Services",
+  menuPartners = "Partenariat",
+  menuContact = "Contact",
+  menuNavigation = "Navigation",
+  menuFastLinks = "Lien rapides",
+  menuSocials = "Réseaux",
+  menuLegacy = "Mentions légales",
+  menuPrivacy = "Politique de confidentialité",
+  menuTerms = "Conditions d'utilisation",
+  moreQuestions = "Des questions? Tu peux nous contacter à ",
+  copyright = " Tous droits réservés.",
+  promo = (
+    <>
+      {"Crée avec passion avec"}
+      {"-"}
+    </>
+  ),
+}) {
   return (
     <_Component
       className="white-footer dark"
@@ -36,12 +57,12 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
               </_Builtin.Block>
             </_Builtin.Block>
             <_Builtin.Block className="text-block-8" tag="div">
-              {"Une communauté dédiée au bien-être canin"}
+              {leitmotiv}
             </_Builtin.Block>
           </_Builtin.Column>
           <_Builtin.Column className="white-footer-column" tag="div">
             <_Builtin.Block className="dark-footer-title" tag="div">
-              {"navigation"}
+              {menuNavigation}
             </_Builtin.Block>
             <_Builtin.Link
               className="light-footer-link"
@@ -51,7 +72,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              {"Accueil"}
+              {menuHome}
             </_Builtin.Link>
             <_Builtin.Link
               className="light-footer-link community"
@@ -71,7 +92,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              {"Services"}
+              {menuServices}
             </_Builtin.Link>
             <_Builtin.Link
               className="light-footer-link pricing"
@@ -91,7 +112,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              {"Partenariat"}
+              {menuPartners}
             </_Builtin.Link>
             <_Builtin.Link
               className="light-footer-link"
@@ -101,12 +122,12 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              {"Contact"}
+              {menuContact}
             </_Builtin.Link>
           </_Builtin.Column>
           <_Builtin.Column className="white-footer-column" tag="div">
             <_Builtin.Block className="dark-footer-title" tag="div">
-              {"Lien rapides"}
+              {menuFastLinks}
             </_Builtin.Block>
             <_Builtin.Link
               className="light-footer-link"
@@ -116,7 +137,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              {"Mentions légales"}
+              {menuLegacy}
             </_Builtin.Link>
             <_Builtin.Link
               className="light-footer-link"
@@ -126,7 +147,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              {"Politique de confidentialité"}
+              {menuPrivacy}
             </_Builtin.Link>
             <_Builtin.Link
               className="light-footer-link"
@@ -136,7 +157,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
                 href: "#",
               }}
             >
-              {"Conditions d'utilisation"}
+              {menuTerms}
             </_Builtin.Link>
           </_Builtin.Column>
           <_Builtin.Column
@@ -144,7 +165,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
             tag="div"
           >
             <_Builtin.Block className="dark-footer-title" tag="div">
-              {"Réseaux"}
+              {menuSocials}
             </_Builtin.Block>
             <_Builtin.Block
               className="home-intro-link-block _3 test"
@@ -211,17 +232,7 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
             </_Builtin.Block>
             <_Builtin.Block className="footer-contact-info-block" tag="div">
               <_Builtin.Paragraph className="paragraph">
-                {"Des questions? Tu peux nous contacter à "}
-                <_Builtin.Link
-                  className="link"
-                  button={false}
-                  block=""
-                  options={{
-                    href: "#",
-                  }}
-                >
-                  {"info@pudgy.com"}
-                </_Builtin.Link>
+                {moreQuestions}
               </_Builtin.Paragraph>
             </_Builtin.Block>
           </_Builtin.Column>
@@ -231,38 +242,10 @@ export function FooterBlack({ as: _Component = _Builtin.Section }) {
           tag="div"
         >
           <_Builtin.Paragraph className="bottom-footer-paragraph dark">
-            <_Builtin.Strong className="bold-text-2" data-new-link="true">
-              {"Copyright © Budgy"}
-            </_Builtin.Strong>
-            {" - 2024-2025"}
+            {copyright}
           </_Builtin.Paragraph>
           <_Builtin.Paragraph className="bottom-footer-paragraph right dark">
-            {"Crée avec passion"}
-            <_Builtin.Link
-              className="bottom-footer-link dark"
-              button={false}
-              target="_blank"
-              block=""
-              options={{
-                href: "http://www.studiocorvus.com",
-                target: "_blank",
-              }}
-            >
-              {" Webflow"}
-            </_Builtin.Link>
-            {"-"}
-            <_Builtin.Link
-              className="bottom-footer-link dark"
-              button={false}
-              target="_blank"
-              block=""
-              options={{
-                href: "https://webflow.com/templates/designers/rowan-hartsuiker",
-                target: "_blank",
-              }}
-            >
-              {"Devlink"}
-            </_Builtin.Link>
+            {promo}
           </_Builtin.Paragraph>
         </_Builtin.Block>
       </_Builtin.Container>
