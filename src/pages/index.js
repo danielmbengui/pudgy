@@ -58,7 +58,7 @@ function getJsonValue(value, lang, namespace = 'common') {
     JSON.stringify(data).replace(/{{(.*?)}}/g, (_, key) => dynamicValues[key] || '')
   );
 
-  console.log(processedData[value]);
+  //console.log(processedData[value]);
   return processedData[value];
 }
 
